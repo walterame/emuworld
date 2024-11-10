@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Engine</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <a href="../index.html">
+          <img
+            src="../Images/GamingZoneTexto.png"
+            alt="RetroGameHub Logo"
+            class="mx-auto"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- Publicidad superior -->
+    <div class="ad-container container">
+      <!-- Código de anuncio aquí -->
+    </div>
+
+    <main class="container">
+      <h1 class="text-3xl font-bold my-6">Juegos de PC Engine</h1>
+
+      <!-- Navegación alfabética -->
+      <nav class="letter-nav" id="letter-nav">
+        <!-- Se llenará con JavaScript -->
+      </nav>
+
+      <div class="flex flex-wrap">
+        <!-- Publicidad izquierda -->
+        <div class="ad-container hidden lg:block lg:w-1/6">
+          <!-- Código de anuncio aquí -->
+        </div>
+
+        <!-- Grid de juegos -->
+        <div class="w-full lg:w-4/6">
+          <div id="games-grid" class="games-grid">
+            <!-- Los juegos se cargarán aquí -->
+          </div>
+        </div>
+
+        <!-- Publicidad derecha -->
+        <div class="ad-container hidden lg:block lg:w-1/6">
+          <!-- Código de anuncio aquí -->
+        </div>
+      </div>
+
+      <!-- Publicidad inferior -->
+      <div class="ad-container">
+        <!-- Código de anuncio aquí -->
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+      <div class="container text-center">
+        <p>&copy; 2024 EmuWorld - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script>
+      // Configuración de la consola
+      const CONSOLE_NAME = "PCEngine";
+      const CONSOLE_TITLE = "PC Engine";
+
+      // Funciones principales
+      document.addEventListener("DOMContentLoaded", function () {
+        createLetterNavigation();
+        loadGames("#");
+      });
+
+      function createLetterNavigation() {
+        const letters = ["#", ...Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ")];
+        const nav = document.getElementById("letter-nav");
+
+        letters.forEach((letter) => {
+          const button = document.createElement("button");
+          button.textContent = letter;
+          button.onclick = () => {
+            document
+              .querySelectorAll("#letter-nav button")
+              .forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+            loadGames(letter);
+          };
+          nav.appendChild(button);
+        });
+      }
+
+      async function loadGames(letter) {
+        try {
+          const response = await fetch(
+            `../api/games.php?console=${CONSOLE_NAME}&letra=${letter}`
+          );
+          const games = await response.json();
+          displayGames(games);
+        } catch (error) {
+          console.error("Error cargando juegos:", error);
+        }
+      }
+
+      function displayGames(games) {
+        const grid = document.getElementById("games-grid");
+        grid.innerHTML = "";
+
+        games.forEach((game) => {
+          const gameCard = document.createElement("div");
+          gameCard.className = "game-card";
+          gameCard.innerHTML = `
+                    <img src="${game.cover_url}" alt="${game.title}">
+                    <h3>${game.title}</h3>
+                    <a href="${game.download_url}">Descargar</a>
+                `;
+          grid.appendChild(gameCard);
+        });
+      }
+    </script>
+  </body>
+</html>

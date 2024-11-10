@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RetroGameHub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="bg-gray-100">
+  <body>
     <header class="bg-gray-800 py-4">
       <div class="container mx-auto text-center">
         <img
@@ -25,304 +25,258 @@
       <div
         class="consoles-row mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4"
       >
-        <!-- ATARI -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=Atari2600"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/Atari2600.png"
-              alt="Atari 2600"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Atari 2600</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=Atari7800"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/Atari7800.png"
-              alt="Atari 7800"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Atari 7800</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=Lynx"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img src="./Images/Lynx.png" alt="Lynx" class="w-20 h-20 mb-2" />
-            <span>Atari Lynx</span>
-          </a>
-        </div>
-
-        <!-- FB Neo -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=FBNeo"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img src="./Images/FBNeo.png" alt="FB Neo" class="w-20 h-20 mb-2" />
-            <span>FB Neo</span>
-          </a>
-        </div>
-
-        <!-- MAME -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=MAME"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img src="./Images/MAME.png" alt="MAME" class="w-20 h-20 mb-2" />
-            <span>MAME</span>
-          </a>
-        </div>
-
-        <!-- NEC -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=PCEngine"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/PCEngine.png"
-              alt="PCEngine"
-              class="w-20 h-20 mb-2"
-            />
-            <span>PC Engine</span>
-          </a>
-        </div>
-
-        <!-- NINTENDO -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=GameBoy"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/GameBoy.png"
-              alt="GameBoy"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Nintendo GameBoy</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=GameBoyColor"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/GameBoyColor.png"
-              alt="GameBoy Color"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Nintendo GameBoy Color</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=GameBoyAdvance"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/GameBoyAdvance.png"
-              alt="GameBoy Adavance"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Nintendo GameBoy Advance</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=Nintendo64"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/Nintendo64.png"
-              alt="N64"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Nintendo 64</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=NintendoDS"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/NintendoDS.png"
-              alt="NDS"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Nintendo DS</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=NES"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img src="./Images/NES.png" alt="NES" class="w-20 h-20 mb-2" />
-            <span>Nintendo NES</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=SNES"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img src="./Images/SNES.png" alt="SNES" class="w-20 h-20 mb-2" />
-            <span>Nintendo SNES</span>
-          </a>
-        </div>
-
-        <!-- SEGA -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=GameGear"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/GameGear.png"
-              alt="Game Gear"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Sega Game Gear</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=MasterSystem"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/MasterSystem.png"
-              alt="Master System"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Sega Master System</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=Megadrive"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/Megadrive.png"
-              alt="Megadrive"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Sega Megadrive</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=SegaCD"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/SegaCD.png"
-              alt="SegaCD"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Sega CD</span>
-          </a>
-        </div>
-
-        <!-- SNK -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=NeoGeoPocket"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/NeoGeoPocket.png"
-              alt="NeoGeoPocket"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Neo Geo Pocket</span>
-          </a>
-        </div>
-
-        <!-- SONY -->
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=PSX"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/PSX.png"
-              alt="PlayStation"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Sony Playstation</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=PS2"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img
-              src="./Images/PS2.png"
-              alt="PlayStation 2"
-              class="w-20 h-20 mb-2"
-            />
-            <span>Sony Playstation 2</span>
-          </a>
-        </div>
-
-        <div class="console-item flex flex-col items-center justify-center">
-          <a
-            href="juegos.php?console=PSP"
-            target="_blank"
-            class="flex flex-col items-center"
-          >
-            <img src="./Images/PSP.png" alt="PSP" class="w-20 h-20 mb-2" />
-            <span>Sony Playstation Portable</span>
-          </a>
-        </div>
+        <a
+          href="./consoles/Atari2600.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/Atari2600.png"
+            alt="Atari 2600"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Atari 2600</span>
+        </a>
+        <a
+          href="./consoles/Atari7800.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/Atari7800.png"
+            alt="Atari 7800"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Atari 7800</span>
+        </a>
+        <a
+          href="./consoles/Lynx.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/Lynx.png"
+            alt="Atari Lynx"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Atari Lynx</span>
+        </a>
+        <a
+          href="./consoles/FBNeo.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/FBNeo.png"
+            alt="FB Neo"
+            class="w-20 h-20 mb-2"
+          />
+          <span>FB Neo</span>
+        </a>
+        <a
+          href="./consoles/MAME.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/MAME.png"
+            alt="MAME"
+            class="w-20 h-20 mb-2"
+          />
+          <span>MAME</span>
+        </a>
+        <a
+          href="./consoles/PCEngine.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/PCEngine.png"
+            alt="PC Engine"
+            class="w-20 h-20 mb-2"
+          />
+          <span>PC Engine</span>
+        </a>
+        <a
+          href="./consoles/GameBoy.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/GameBoy.png"
+            alt="Nintendo GameBoy"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo GameBoy</span>
+        </a>
+        <a
+          href="./consoles/GameBoyColor.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/GameBoyColor.png"
+            alt="Nintendo GameBoy Color"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo GameBoy Color</span>
+        </a>
+        <a
+          href="./consoles/GameBoyAdvance.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/GameBoyAdvance.png"
+            alt="Nintendo GameBoy Advance"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo GameBoy Advance</span>
+        </a>
+        <a
+          href="./consoles/Nintendo64.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/Nintendo64.png"
+            alt="Nintendo 64"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo 64</span>
+        </a>
+        <a
+          href="./consoles/NintendoDS.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/NintendoDS.png"
+            alt="Nintendo DS"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo DS</span>
+        </a>
+        <a
+          href="./consoles/NES.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/NES.png"
+            alt="Nintendo NES"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo NES</span>
+        </a>
+        <a
+          href="./consoles/SNES.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/SNES.png"
+            alt="Nintendo SNES"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Nintendo SNES</span>
+        </a>
+        <a
+          href="./consoles/GameGear.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/GameGear.png"
+            alt="Sega Game Gear"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sega Game Gear</span>
+        </a>
+        <a
+          href="./consoles/MasterSystem.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/MasterSystem.png"
+            alt="Sega Master System"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sega Master System</span>
+        </a>
+        <a
+          href="./consoles/Megadrive.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/Megadrive.png"
+            alt="Sega Megadrive"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sega Megadrive</span>
+        </a>
+        <a
+          href="./consoles/SegaCD.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/SegaCD.png"
+            alt="Sega CD"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sega CD</span>
+        </a>
+        <a
+          href="./consoles/NeoGeo Pocket.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/NeoGeoPocket.png"
+            alt="Neo Geo Pocket"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Neo Geo Pocket</span>
+        </a>
+        <a
+          href="./consoles/PSX.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/PSX.png"
+            alt="Sony Playstation"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sony Playstation</span>
+        </a>
+        <a
+          href="./consoles/PS2.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/PS2.png"
+            alt="Sony Playstation 2"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sony Playstation 2</span>
+        </a>
+        <a
+          href="./consoles/PSP.html"
+          class="console-item flex flex-col items-center justify-center"
+          target="_blank"
+        >
+          <img
+            src="./Images/consoleIcons/PSP.png"
+            alt="Sony Playstation Portable"
+            class="w-20 h-20 mb-2"
+          />
+          <span>Sony Playstation Portable</span>
+        </a>
       </div>
     </main>
   </body>
