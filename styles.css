@@ -1,132 +1,97 @@
-/* Reset básico */
+/* Reset y estilos base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
   line-height: 1.6;
+}
+
+/* Header y contenedor */
+.bg-header {
+  background-color: #1a202c;
+  padding: 1rem 0;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
-/* Header */
-header {
-  background-color: #1a202c;
-  padding: 1rem 0;
-}
-
-header img {
-  max-height: 80px;
+.logo {
+  height: 80px;
   width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Navegación alfabética */
-.letter-nav {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+/* Título principal */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #2d3748;
 }
 
-.letter-nav button {
-  padding: 0.5rem 1rem;
-  margin: 0.25rem;
-  border: none;
-  border-radius: 0.375rem;
-  background-color: #f3f4f6;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.letter-nav button:hover {
-  background-color: #3b82f6;
-  color: white;
-}
-
-.letter-nav button.active {
-  background-color: #3b82f6;
-  color: white;
-}
-
-/* Grid de juegos */
-.games-grid {
+/* Grid de consolas */
+.consoles-grid {
   display: grid;
-  gap: 1rem;
-  padding: 1rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
-/* Tarjetas de juegos */
-.game-card {
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+/* Tarjeta de consola */
+.console-card {
   display: flex;
   flex-direction: column;
-}
-
-.game-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.375rem;
-  margin-bottom: 1rem;
-}
-
-.game-card h3 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-align: center;
-  height: 3rem;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.game-card a {
-  display: block;
-  background-color: #3b82f6;
-  color: white;
-  text-align: center;
-  padding: 0.5rem;
-  border-radius: 0.375rem;
+  align-items: center;
   text-decoration: none;
-  transition: background-color 0.2s;
+  color: #2d3748;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.game-card a:hover {
-  background-color: #2563eb;
+.console-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Contenedores de publicidad */
-.ad-container {
-  margin: 1rem 0;
+.console-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.console-card:hover img {
+  transform: scale(1.1);
+}
+
+.console-card span {
   text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-/* Media queries */
-@media (min-width: 640px) {
-  .games-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* Responsive */
+@media (max-width: 768px) {
+  .consoles-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
   }
-}
 
-@media (min-width: 768px) {
-  .games-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .games-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .console-card img {
+    width: 60px;
+    height: 60px;
   }
 }
